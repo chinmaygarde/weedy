@@ -1,5 +1,6 @@
-# Zephyr writes compile_commands.json into the workspace build dir.
+# Zephyr writes compile_commands.json into the workspace build dir. Run clangd
+# with --query-driver='**/arm-zephyr-eabi-*' so it picks up the Zephyr SDK
+# GCC's target and system headers (including libstdc++).
 CompileFlags:
   CompilationDatabase: ../build
-  Add: [--target=arm-none-eabi]
   Remove: [-fno-reorder-functions, -fno-freestanding, -mfp16-format=*, -fno-printf-return-value, --param=*, -specs=*, -fdiagnostics-color=*]
