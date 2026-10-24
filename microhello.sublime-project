@@ -6,6 +6,12 @@
 			"name": "Microhello"
 		}
 	],
+	"build_systems": [
+		{
+			"name": "Flash",
+			"cmd": ["just", "flash"]
+		}
+	],
 	"settings":
 	{
 		"LSP":
