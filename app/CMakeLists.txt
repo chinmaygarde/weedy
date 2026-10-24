@@ -32,4 +32,5 @@ endfunction()
 depend_on_zephyr_generated_headers(${ZEPHYR_PIGWEED_MODULE_DIR})
 
 target_sources(app PRIVATE src/main.cc)
+target_compile_options(app PRIVATE -Wall -Wextra -Werror)
 target_link_libraries(app PRIVATE pw_digital_io_zephyr pw_log)
