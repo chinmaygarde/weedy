@@ -15,8 +15,7 @@ constexpr auto kBlinkInterval = 1s;
 }  // namespace
 
 int main() {
-  pw::digital_io::ZephyrDigitalOut led(
-      GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios));
+  pw::digital_io::ZephyrDigitalOut led(GPIO_DT_SPEC_GET(DT_ALIAS(led0), gpios));
   PW_CHECK_OK(led.Enable());
 
   bool led_on = false;
