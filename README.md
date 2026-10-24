@@ -32,6 +32,7 @@ Build output goes to `workspace/build`.
 ## Editor setup
 
 `.clangd` points clangd at `workspace/build/compile_commands.json` (run
-`just build` first). Start clangd with
-`--query-driver='**/arm-zephyr-eabi-*'` so it can find the Zephyr SDK's C++
-standard library headers.
+`just build` first). clangd also needs
+`--query-driver='**/arm-zephyr-eabi-*'` to find the Zephyr SDK's C++ standard
+library headers; `microhello.sublime-project` sets this for Sublime Text's
+LSP-clangd.

@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Sublime Text per-user state
+*.sublime-workspace

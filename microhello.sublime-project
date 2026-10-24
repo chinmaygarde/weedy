@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"name": "Microhello"
+		}
+	],
+	"settings":
+	{
+		"LSP":
+		{
+			"LSP-clangd":
+			{
+				"initialization_options":
+				{
+					// Let clangd ask the Zephyr SDK's GCC for its target and system
+					// headers (including libstdc++). Can't be set in .clangd.
+					"clangd.query-driver": "**/arm-zephyr-eabi-*",
+				},
+			},
+		},
+	},
+}
