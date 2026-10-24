@@ -29,3 +29,7 @@ CXX_FILES := "git ls-files -z --cached --others --exclude-standard '*.cc' '*.cpp
 # Fail if any C++ source isn't formatted.
 @check-format:
   {{CXX_FILES}} | xargs -0 uv run clang-format --dry-run --Werror
+
+# Open the board's serial console. Exit with Ctrl-].
+@monitor port=`ls /dev/cu.usbmodem* 2>/dev/null | head -1`:
+  uv run python -m serial.tools.miniterm --raw --quiet {{port}} 115200
