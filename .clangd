@@ -1,0 +1,5 @@
+# Zephyr writes compile_commands.json into the workspace build dir.
+CompileFlags:
+  CompilationDatabase: ../build
+  Add: [--target=arm-none-eabi]
+  Remove: [-fno-reorder-functions, -fno-freestanding, -mfp16-format=*, -fno-printf-return-value, --param=*, -specs=*, -fdiagnostics-color=*]
