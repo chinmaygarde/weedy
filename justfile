@@ -2,13 +2,13 @@ BOARD_NAME := "nucleo_c562re"
 
 # Run west from the workspace root (the parent of this repo).
 [working-directory: ".."]
-west *args:
+@west *args:
   uv run --project microhello west {{args}}
 
 build: (west "build" "-b" BOARD_NAME "microhello/app" "-d" "build")
 
 [working-directory: ".."]
-clean:
+@clean:
   rm -rf build
 
 flash: build (west "flash" "-d" "build")
