@@ -3,4 +3,10 @@
 # GCC's target and system headers (including libstdc++).
 CompileFlags:
   CompilationDatabase: ../build
-  Remove: [-fno-reorder-functions, -fno-freestanding, -mfp16-format=*, -fno-printf-return-value, --param=*, -specs=*, -fdiagnostics-color=*]
+  # GCC-only flags that clang rejects. Zephyr adds -fno-printf-return-value
+  # to C files only.
+  Remove: [-fno-reorder-functions, -mfp16-format=*, -fno-printf-return-value]
+Diagnostics:
+  # Zephyr's log macros (Z_LOG_MSG_ON_STACK_ALLOC) build messages in a
+  # runtime-sized stack array. GCC accepts this silently in C++; clang warns.
+  Suppress: [vla-cxx-extension]
