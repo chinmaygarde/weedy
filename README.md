@@ -14,7 +14,7 @@ workspace/
 
 ```sh
 mkdir workspace && cd workspace
-git clone <this repo> weedy
+git clone https://github.com/chinmaygarde/weedy.git
 cd weedy
 just init
 just sdk
