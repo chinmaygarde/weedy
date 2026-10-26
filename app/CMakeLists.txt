@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.20.0)
 
 find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
-project(microhello)
+project(weedy)
 
 # Pigweed links its libraries into zephyr_interface, which everything in
 # Zephyr links, including the libraries that generate headers such as

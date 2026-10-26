@@ -3,9 +3,9 @@ BOARD_NAME := "nucleo_c562re"
 # Run west from the workspace root (the parent of this repo).
 [working-directory: ".."]
 @west *args:
-  uv run --project microhello west {{args}}
+  uv run --project weedy west {{args}}
 
-build: (west "build" "-b" BOARD_NAME "microhello/app" "-d" "build")
+build: (west "build" "-b" BOARD_NAME "weedy/app" "-d" "build")
 
 [working-directory: ".."]
 @clean:
@@ -18,7 +18,7 @@ sdk: update (west "sdk" "install")
 update: (west "update") (west "packages" "pip" "--install")
 
 # Run once after cloning this repo into an empty workspace directory.
-init: (west "init" "-l" "microhello")
+init: (west "init" "-l" "weedy")
 
 CXX_FILES := "git ls-files -z --cached --others --exclude-standard '*.cc' '*.cpp' '*.h' '*.hpp'"
 

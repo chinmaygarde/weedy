@@ -1,11 +1,11 @@
-# microhello
+# weedy
 
 Zephyr application for the `nucleo_c562re`. This repo is the west manifest; it
 pins Zephyr in `west.yml` and lives inside a west workspace:
 
 ```
 workspace/
-├── microhello/   ← this repo
+├── weedy/   ← this repo
 ├── zephyr/       ← fetched by west
 └── modules/      ← fetched by west
 ```
@@ -14,8 +14,8 @@ workspace/
 
 ```sh
 mkdir workspace && cd workspace
-git clone <this repo> microhello
-cd microhello
+git clone <this repo> weedy
+cd weedy
 just init
 just sdk
 ```
@@ -34,5 +34,5 @@ Build output goes to `workspace/build`.
 `.clangd` points clangd at `workspace/build/compile_commands.json` (run
 `just build` first). clangd also needs
 `--query-driver='**/arm-zephyr-eabi-*'` to find the Zephyr SDK's C++ standard
-library headers; `microhello.sublime-project` sets this for Sublime Text's
+library headers; `weedy.sublime-project` sets this for Sublime Text's
 LSP-clangd.
