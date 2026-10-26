@@ -11,3 +11,4 @@ wheels/
 
 # Sublime Text per-user state
 *.sublime-workspace
+.DS_Store
