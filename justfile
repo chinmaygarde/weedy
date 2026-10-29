@@ -1,5 +1,8 @@
 BOARD_NAME := "nucleo_c562re"
 
+@default:
+  just --list
+
 # Run west from the workspace root (the parent of this repo).
 [working-directory: ".."]
 @west *args:
